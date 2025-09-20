@@ -1,0 +1,137 @@
+:root {
+  --main-bg: #f5f7fa;
+  --accent: #006400;
+  --accent-light: #a7e9af;
+  --text: #222;
+  --header-bg: #fff;
+  --footer-bg: #006400;
+  --footer-text: #fff;
+  --weather-icon-size: 1.5em;
+  --font-main: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--main-bg);
+  color: var(--text);
+}
+
+header {
+  background: var(--header-bg);
+  text-align: center;
+  padding: 1.5rem 1rem 1rem 1rem;
+  border-bottom: 4px solid var(--accent);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: var(--accent);
+}
+
+header p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.hero picture, .hero img {
+  width: 100%;
+  display: block;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.info {
+  margin: 2rem 0;
+}
+
+.info h2 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.weather {
+  background: var(--accent-light);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.weather h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.svg-icon-mobile {
+  display: block;
+  margin-top: 1rem;
+}
+
+.weather-icon {
+  display: none;
+}
+
+footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+#lastModified {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* Large view */
+@media (min-width: 700px) {
+  .hero img, .hero picture {
+    max-height: 400px;
+  }
+  .weather-details {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .svg-icon-mobile {
+    display: none;
+  }
+  .weather-icon {
+    display: inline-block;
+    font-size: var(--weather-icon-size);
+    margin-left: 0.5em;
+    vertical-align: middle;
+  }
+  .weather h2::after {
+    content: "⛅";
+    font-size: var(--weather-icon-size);
+    margin-left: 0.5em;
+    color: var(--accent);
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

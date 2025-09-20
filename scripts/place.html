@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uganda - The Pearl of Africa</title>
+  <meta name="description" content="Discover Uganda, its beauty, weather, and culture.">
+  <meta name="author" content="SEBAGALA JOET">
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Uganda</h1>
+    <p>The Pearl of Africa</p>
+  </header>
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/uganda-hero-large.jpeg" media="(min-width: 700px)">
+        <img src="images/uganda-hero-small.webp" alt="Beautiful landscape of Uganda">
+      </picture>
+    </section>
+    <section class="info">
+      <h2>About Uganda</h2>
+      <p>
+        Uganda is a landlocked country in East Africa known for its diverse wildlife, beautiful lakes, and friendly people. It is home to the source of the Nile and the famous mountain gorillas.
+      </p>
+    </section>
+    <section class="weather">
+      <h2>Weather <span class="weather-icon" id="weather-emoji"></span></h2>
+      <div class="weather-details">
+        <div>
+          <span class="label">Temperature:</span>
+          <span id="temp">24</span>°C
+        </div>
+        <div>
+          <span class="label">Wind Speed:</span>
+          <span id="wind">12</span> km/h
+        </div>
+        <div>
+          <span class="label">Wind Chill:</span>
+          <span id="windchill">N/A</span>
+        </div>
+        <div class="svg-icon-mobile">
+          <!-- Example SVG from iconfinder.com, can be replaced with your own -->
+          <img src="images/cloudy.jpg" alt="Cloudy" width="32" height="32">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="currentyear"></span> | SEBAGALA JOET | Uganda</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
